@@ -1,4 +1,4 @@
-# tf-bpg-pve-k3s
+# tf-bpg-pve-jenkins-agent
 Deploy a Jenkins Agent VM (Ubuntu Based) running docker and other useful packages in pipelines on an existing [Proxmox VE](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview) host for homelab scenarios using [Terraform](https://www.hashicorp.com/en/products/terraform) leveraging the [bpg/proxmox](https://registry.terraform.io/providers/bpg/proxmox/latest/docs) provider
 
 > [!IMPORTANT]
