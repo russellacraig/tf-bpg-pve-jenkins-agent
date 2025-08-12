@@ -14,7 +14,7 @@ This was created quickly and purely for disposable homelab testing... as such th
 
 The onboarding steps can be skipped if you've already configured this for bpg/proxmox
 ## Terraform PVE Onboarding (API)
-SSH to your pve instance:
+SSH to your PVE instance:
 ```bash
 $ ssh root@pve.lan
 ```
