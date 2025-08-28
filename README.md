@@ -1,9 +1,10 @@
 # tf-bpg-pve-jenkins-agent
-Deploy a Jenkins Agent VM (Ubuntu Based) running docker and other useful packages in pipelines on an existing [Proxmox VE](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview) host for homelab scenarios using [Terraform](https://www.hashicorp.com/en/products/terraform) leveraging the [bpg/proxmox](https://registry.terraform.io/providers/bpg/proxmox/latest/docs) provider
+Deploy a Jenkins Agent VM (Ubuntu Based) running docker and other useful packages in pipelines on an existing [Proxmox VE](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview) host for homelab scenarios using [Terraform](https://www.hashicorp.com/en/products/terraform) or [OpenTofu](https://opentofu.org/) leveraging the [bpg/proxmox](https://registry.terraform.io/providers/bpg/proxmox/latest/docs) provider
 
 > [!IMPORTANT]
 > Tested with PVE 8.4.1, Terraform 1.5.7 and bpg/proxmox 0.70.0.\
-> Requirements may change in PVE 9.x and have not been tested (by me).
+> Requirements may change in PVE 9.x and have not been tested (by me).\
+> versions.tf limits Terraform to pre BSL versions, while versions.tofu bypasses this for OpenTofu
 
 This was created quickly and purely for disposable homelab testing... as such there are a few security caveats below:
 > [!IMPORTANT]
@@ -117,13 +118,23 @@ Copy the example to terraform.tfvars and update with your details.
 
 ## Terraform Deployment
 ```bash
+# Terraform
 $ terraform init
 $ terraform plan
 $ terraform apply
+
+# OpenTofu
+$ tofu init
+$ tofu plan
+$ tofu apply
 ```
 ## Terraform Cleanup
 ```bash
+# Terraform
 $ terraform destroy
+
+# OpenTofu
+$ tofu destroy
 ```
 ## Terraform Variables
 The variables are declared in main.tf with their defaults (These might be moved to a variables.tf later) and you can override as needed... the virtualmachine defaults are below:
