@@ -2,7 +2,7 @@
 Deploy a Jenkins Agent VM (Ubuntu Based) running docker and other useful packages in pipelines on an existing [Proxmox VE](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview) host for homelab scenarios using [Terraform](https://www.hashicorp.com/en/products/terraform) or [OpenTofu](https://opentofu.org/) leveraging the [bpg/proxmox](https://registry.terraform.io/providers/bpg/proxmox/latest/docs) provider
 
 > [!IMPORTANT]
-> Tested with PVE 8.4.1, Terraform 1.5.7 and bpg/proxmox 0.70.0.\
+> Tested with PVE 8.4.1, Terraform 1.5.7, OpenTofu 1.10.5 and bpg/proxmox 0.70.0.\
 > Requirements may change in PVE 9.x and have not been tested (by me).\
 > versions.tf limits Terraform to pre BSL versions, while versions.tofu bypasses this for OpenTofu
 
